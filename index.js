@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const db = require('./db/connection');
+const { exit } = require('process');
 
 db.connect(() => {
     init();
@@ -11,7 +12,7 @@ function init() {
         {
             type: 'list',
             name: 'questions',
-            choices: ["View all departments", "View all roles", "View all employees", "Add a department", "Add a role", "Add an employee", "Update an employee role"]
+            choices: ["View all departments", "View all roles", "View all employees", "Add a department", "Add a role", "Add an employee", "Update an employee role", "Quit"]
         }
     ])
     .then(response => {
@@ -35,6 +36,9 @@ function init() {
         }
         else if (response.questions === 'Update an employee role') {
             addUpdt()
+        }
+        else  if (response.questions === 'Quit') {
+            exit()
         }
     })
 }
@@ -60,6 +64,19 @@ function viewEmpl() {
     })
 }
 
-// function addDept() {
-//     db.query
-// }
+function addDept() {
+    inquirer.prompt([
+        {
+            type: 'question',
+            name: 'newDepartment',
+            message: 'What would you like the new department called?'
+        }
+    ])
+    .then((response) => {
+        db.query(`INSERT INTO departments (dept_name) VALUES(?)`, response.newDepartment, err => {
+            console.log('Department created');
+            viewDept();
+        })
+    })
+}
+

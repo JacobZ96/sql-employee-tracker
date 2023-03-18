@@ -28,7 +28,7 @@ Please do not contribute to this project
 npm test
 
 ## Applications Used
-nodejs, MySQL, inquirer, console.table 
+nodejs, MySQL, inquirer, console.table, NPM
 
 ## Questions
 If you have any questing please contact me at jacobzea96@gmail.com, and you can find more of my work at https://github.com/JacobZ96. 
