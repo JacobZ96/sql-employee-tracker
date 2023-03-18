@@ -18,7 +18,7 @@ This application will allow you to track employee/manager role relations. You wi
 npm i
 
 ## Usage 
-npm start to run this application withing you integrated terminal
+npm start to run this application within your integrated terminal
 
 
 ## How to Contribute 
@@ -28,7 +28,7 @@ Please do not contribute to this project
 npm test
 
 ## Applications Used
-nodejs, MySQL, inquirer, express 
+nodejs, MySQL, inquirer, console.table 
 
 ## Questions
 If you have any questing please contact me at jacobzea96@gmail.com, and you can find more of my work at https://github.com/JacobZ96. 
