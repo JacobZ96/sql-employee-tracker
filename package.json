@@ -2,10 +2,10 @@
   "name": "sql-employee-tracker",
   "version": "1.0.0",
   "description": "This application will allow you to track employee/manager role relations. You will be able to filter your search by department, roles, or employees. You will also be able to add department, roles,  employees, as well as update and employees's role.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
