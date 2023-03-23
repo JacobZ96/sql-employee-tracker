@@ -159,7 +159,7 @@ function addUpdt() {
         }
     ])
     .then((response) => {
-        db.query(`UPDATE employees SET employees.id = ? WHERE employee.id = ?`, [response.pickedEmpl, response.newRole], err => {
+        db.query(`UPDATE employees SET role_id = ? WHERE id = ?`, [response.newRole, response.pickedEmpl], err => {
             console.log('Employee updated');
             viewEmpl();
         })
